@@ -1,5 +1,5 @@
 {
-  "name": "Chess Project",
+  "name": "chess_project",
   "version": "1.0.0",
   "description": "A chess-based RPG game built with Phaser",
   "main": "src/js/game.js",
