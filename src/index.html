@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+     <html lang="en">
+     <head>
+         <meta charset="UTF-8">
+         <meta name="viewport" content="width=device-width, initial-scale=1.0">
+         <title>Chess Project</title>
+         <link rel="stylesheet" href="css/style.css">
+     </head>
+     <body>
+         <div id="game-container"></div>
+         <div id="notification-container" class="notification-container">
+             <div class="notification">
+                 <h1>Welcome to Chess Project!</h1>
+                 <button id="go-button">Go!!!</button>
+             </div>
+         </div>
+         <div id="timer-container">
+             <div id="player-black" class="player-timer">
+                 <h3>Đen</h3>
+                 <div class="time">10:00</div>
+                 <button class="pause-btn">Tạm dừng</button>
+             </div>
+             <div id="player-white" class="player-timer">
+                 <h3>Trắng</h3>
+                 <div class="time">10:00</div>
+                 <button class="pause-btn">Tạm dừng</button>
+             </div>
+         </div>
+         <div id="color-controls">
+             <label>Ô trắng: <input type="color" id="white-square" value="#f0d9b5"></label>
+             <label>Ô đen: <input type="color" id="black-square" value="#b58863"></label>
+             <label>Quân trắng: <input type="color" id="white-piece" value="#ffffff"></label>
+             <label>Quân đen: <input type="color" id="black-piece" value="#000000"></label>
+         </div>
+     </body>
+     </html>
