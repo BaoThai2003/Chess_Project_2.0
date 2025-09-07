@@ -1,0 +1,70 @@
+{
+  "skills": [
+    {
+      "id": "a1b2c3d4-e5f6-7890-abcd-ef1234567890",
+      "name": "Tiến công",
+      "description": "Đẩy 1 quân cờ chỉ định của phe mình tiến thêm 2 ô.",
+      "cost": 1,
+      "effect": {
+        "type": "move",
+        "target": "single_ally",
+        "move_extra": 2
+      },
+      "duration": 1
+    },
+    {
+      "id": "b2c3d4e5-f678-9012-bcde-f23456789012",
+      "name": "Che chở",
+      "description": "Tạo lớp khiên, giảm 0.25 sát thương từ mọi nguồn cho toàn đội trong 3 lượt.",
+      "cost": 1,
+      "effect": {
+        "type": "shield",
+        "target": "all_allies",
+        "damage_reduction": 0.25
+      },
+      "duration": 3
+    },
+    {
+      "id": "c3d4e5f6-7890-1234-cdef-345678901234",
+      "name": "Lao động hăng say",
+      "description": "Toàn bộ quân mình nhận 0.25 sát thương ngay lập tức, nhưng tăng 0.25 sát thương trong 3 lượt tiếp theo.",
+      "cost": 1,
+      "effect": {
+        "type": "tradeoff",
+        "target": "all_allies",
+        "self_damage": 0.25,
+        "damage_buff": 0.25
+      },
+      "duration": 3
+    },
+    {
+      "id": "d4e5f678-9012-3456-def0-456789012345",
+      "name": "Đồng tâm hiệp lực",
+      "description": "Khi 1 quân phe mình bị loại hoặc chịu trên 0.5 sát thương → sát thương toàn quân tăng vĩnh viễn 0.25.",
+      "cost": 1,
+      "effect": {
+        "type": "conditional_buff",
+        "trigger": {
+          "condition": "ally_killed_or_damaged",
+          "damage_threshold": 0.5
+        },
+        "target": "all_allies",
+        "damage_buff": 0.25
+      },
+      "duration": "permanent"
+    },
+    {
+      "id": "e5f67890-1234-5678-ef01-567890123456",
+      "name": "Anh em ta là bão cát",
+      "description": "Gọi bão cát bao phủ 2 hàng trong 3 lượt. Quân địch trong phạm vi chỉ có thể di chuyển tối đa giảm đi 1 ô.",
+      "cost": 1,
+      "effect": {
+        "type": "area_debuff",
+        "target": "enemy_rows",
+        "rows_affected": 2,
+        "move_reduction": 1
+      },
+      "duration": 3
+    }
+  ]
+}

@@ -1,0 +1,91 @@
+{
+  "pieces": [
+    {
+      "id": "f6789012-3456-7890-1234-678901234567",
+      "piece": "Pawn",
+      "name": "Sức dân cuồn cuộn",
+      "description": "Khi di chuyển vào ô năng lượng, tất cả quân AZW khác nhận +0.25 máu tạm thời trong 1 lượt.",
+      "cost": 1,
+      "effect": {
+        "type": "heal",
+        "trigger": "move_to_energy_tile",
+        "target": "all_allies_except_self",
+        "heal_amount": 0.25
+      },
+      "duration": 1
+    },
+    {
+      "id": "01234567-8901-2345-6789-012345678901",
+      "piece": "Rook",
+      "name": "Đoàn Xe Hàng Sa mạc",
+      "description": "Khi tấn công thành công, hồi 0.25 máu cho tối đa 2 quân AZW liền kề.",
+      "cost": 2,
+      "effect": {
+        "type": "heal",
+        "trigger": "successful_attack",
+        "target": "adjacent_allies",
+        "max_targets": 2,
+        "heal_amount": 0.25
+      },
+      "duration": 1
+    },
+    {
+      "id": "12345678-9012-3456-7890-123456789012",
+      "piece": "Knight",
+      "name": "Lao dịch khổ sai",
+      "description": "Sau khi nhảy, nếu hạ gục được quân địch → gây thêm 0.25 sát thương lan cho quân địch đứng cạnh ô đáp xuống.",
+      "cost": 2,
+      "effect": {
+        "type": "splash_damage",
+        "trigger": "kill_enemy",
+        "target": "enemies_adjacent_to_landing",
+        "damage": 0.25
+      },
+      "duration": 1
+    },
+    {
+      "id": "23456789-0123-4567-8901-234567890123",
+      "piece": "Bishop",
+      "name": "Người dẫn đường",
+      "description": "Khi đi qua ô năng lượng, để lại dấu ấn trong 1 lượt. Quân AZW đứng trên đó được +1 ô di chuyển trong lượt kế tiếp.",
+      "cost": 1,
+      "effect": {
+        "type": "buff",
+        "trigger": "move_through_energy_tile",
+        "target": "allies_on_mark",
+        "move_buff": 1,
+        "mark_duration": 1
+      },
+      "duration": 1
+    },
+    {
+      "id": "34567890-1234-5678-9012-345678901234",
+      "piece": "Queen",
+      "name": "Tiếng gào hoang mạc",
+      "description": "Khi bị tấn công, phản lại 0.5 sát thương lên quân địch (kích hoạt tối đa 1 lần mỗi 2 lượt).",
+      "cost": 3,
+      "effect": {
+        "type": "counter_damage",
+        "trigger": "attacked",
+        "target": "attacker",
+        "damage": 0.5,
+        "cooldown": 2
+      },
+      "duration": 1
+    },
+    {
+      "id": "45678901-2345-6789-0123-456789012345",
+      "piece": "King",
+      "name": "Đồng tâm",
+      "description": "Khi số quân AZW còn lại ≤ 6 → Vua tự hồi 0.25 máu mỗi lượt.",
+      "cost": 2,
+      "effect": {
+        "type": "heal",
+        "trigger": "ally_count_leq_6",
+        "target": "self",
+        "heal_amount": 0.25
+      },
+      "duration": "permanent"
+    }
+  ]
+}
